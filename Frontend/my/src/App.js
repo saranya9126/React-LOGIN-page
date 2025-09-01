@@ -14,7 +14,7 @@ const handlePass= (e)=>
   setPass(e.target.value)
 function check()
   {
-    var logindetails = axios.get(`http://localhost:5000/login?username=${user}&password=${pass}`);
+    var logindetails = axios.get(`/api/login?username=${user}&password=${pass}`);
     logindetails.then(function(data){
       if (data.data===true){
           navigate("./success")
